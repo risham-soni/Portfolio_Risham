@@ -21,6 +21,11 @@ import B3 from "../assets/B3.png";
 import B4 from "../assets/B4.png";
 import B5 from "../assets/B5.png";
 
+import SepsisWallpaper from "../assets/project-sepsis.webp";
+import PlacementWallpaper from "../assets/project-placement.webp";
+import MpladsWallpaper from "../assets/project-mplads.webp";
+import BookMyStayWallpaper from "../assets/project-bookmystay.webp";
+
 export default function Work() {
   const [activeProjectIndex, setActiveProjectIndex] = useState(null);
 
@@ -104,7 +109,8 @@ export default function Work() {
           { label: "Database", value: "MongoDB" },
         ],
         title: "Early Sepsis AI Risk Prediction",
-        images: [S1, S2, S3, S4, S5],
+        wallpaper: SepsisWallpaper,
+        images: [SepsisWallpaper, S1, S2, S3, S4, S5],
         githubUrl:
           "https://github.com/risham-soni/sepsis-AI-risk-prediction-mern",
         liveDemoUrl: "https://sepsis-hazel.vercel.app/login",
@@ -193,7 +199,8 @@ export default function Work() {
           { label: "Document Support", value: "PDF + OCR" },
         ],
         title: "AI-Powered Placement Preparation Assistant",
-        images: [A1, A2, A3, A4, A5],
+        wallpaper: PlacementWallpaper,
+        images: [PlacementWallpaper, A1, A2, A3, A4, A5],
         githubUrl:
           "https://github.com/risham-soni/AI-Powered-Placement-Preparation-Assistant",
         liveDemoUrl:
@@ -290,7 +297,8 @@ export default function Work() {
         ],
 
         title: "MPLADS Fund Utilization Anomaly Detection System",
-        images: [M1],
+        wallpaper: MpladsWallpaper,
+        images: [MpladsWallpaper, M1],
         githubUrl: "https://github.com/risham-soni/mplads-",
         liveDemoUrl: "https://sih-2026-one.vercel.app/login",
         exploreUrl: "https://sih-2026-one.vercel.app/login",
@@ -375,7 +383,8 @@ export default function Work() {
           { label: "Image Storage", value: "Cloudinary" },
         ],
         title: "BookMyStay",
-        images: [B2, B3, B4, B5],
+        wallpaper: BookMyStayWallpaper,
+        images: [BookMyStayWallpaper, B2, B3, B4, B5],
         githubUrl:
           "https://github.com/risham-soni/BookMyStay-MERN",
         liveDemoUrl: "https://book-my-stay-mern-3e6g.vercel.app/",
@@ -409,7 +418,16 @@ export default function Work() {
             }}
             aria-label={`Open project: ${proj.title}`}
           >
-            <div className={`project-bg ${proj.bgClass}`} />
+            <div className={`project-bg ${proj.bgClass}`}>
+              {proj.wallpaper && (
+                <img
+                  src={proj.wallpaper}
+                  alt={proj.title}
+                  className="project-wallpaper"
+                  loading="lazy"
+                />
+              )}
+            </div>
             <div className="project-overlay" />
             <div className="project-info">
               <p className="font-mono project-category text-gray uppercase">
