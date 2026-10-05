@@ -30,11 +30,27 @@ header.site-header {
   letter-spacing: 0.08em;
   display: inline-flex;
   align-items: center;
-  transition: opacity 0.2s ease;
+  gap: 0.65rem;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .logo:hover {
-  opacity: 0.85;
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.logo-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  object-fit: contain;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.35);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.logo:hover .logo-icon {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.6);
 }
 
 .nav-links {

@@ -71,8 +71,9 @@ export default function Navbar({ activeSection = 'home', onNavigate }) {
             href="#home"
             onClick={(e) => handleNavClick('home', e)}
             className="logo"
+            aria-label="Risham Soni Home"
           >
-            RISHAM SONI
+            <span>RISHAM SONI</span>
           </a>
 
           {/* Centered Desktop Navigation Links */}
