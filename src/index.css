@@ -1,0 +1,21 @@
+/* Master Stylesheet */
+
+/* 1. Design Tokens, Resets & Base Styles */
+@import './styles/tokens.css';
+
+/* 2. Layout Core */
+@import './styles/layout.css';
+
+/* 3. Modular UI Components */
+@import './styles/components/navbar.css';
+@import './styles/components/scrollbar.css';
+@import './styles/components/project-modal.css';
+@import './styles/components/footer.css';
+
+/* 4. Page Layouts */
+@import './styles/pages/hero.css';
+@import './styles/pages/about.css';
+@import './styles/pages/work.css';
+@import './styles/pages/skills.css';
+@import './styles/pages/education.css';
+@import './styles/pages/contact.css';

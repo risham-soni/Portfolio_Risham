@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id], header[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+body {
+  background-color: #08080c;
+  color: #e5e5e5;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+::selection {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Custom Native Browser Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08080c;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 999px;
+  border: 2px solid #08080c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #94a3b8;
+}
+
+/* Typography Utilities */
+.font-mono {
+  font-family: 'Space Mono', monospace;
+}
+
+.text-gray {
+  color: #94a3b8;
+}
+
+.text-dark-gray {
+  color: #64748b;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+/* Clean Heading */
+.section-title {
+  font-size: clamp(1.75rem, 5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}

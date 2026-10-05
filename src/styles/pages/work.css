@@ -1,0 +1,106 @@
+/* Work Section */
+.work-page-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.work-header {
+  margin-bottom: 3rem;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.project-card {
+  position: relative;
+  aspect-ratio: 16/10;
+  min-height: 200px;
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.project-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.bg-1 {
+  background: radial-gradient(circle at 80% 20%, #1e293b, #08080c);
+}
+
+.bg-2 {
+  background: radial-gradient(circle at 20% 80%, #312e81, #08080c);
+}
+
+.bg-3 {
+  background: radial-gradient(circle at 50% 50%, #064e3b, #08080c);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  transition: background-color 0.2s ease;
+}
+
+.project-card:hover .project-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: clamp(1.1rem, 3.5vw, 1.75rem);
+  z-index: 20;
+}
+
+.project-category {
+  margin-bottom: 0.4rem;
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  color: #94a3b8;
+}
+
+.project-title {
+  font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+@media (max-width: 768px) {
+  .work-page-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .work-header {
+    margin-bottom: 2rem;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    aspect-ratio: 16/11;
+    min-height: 180px;
+  }
+}
