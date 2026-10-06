@@ -18,6 +18,10 @@
   flex-direction: column;
   gap: 2rem;
   transition: border-color 0.2s ease;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .education-card:hover {
@@ -114,8 +118,9 @@
 /* Metrics Grid */
 .education-metrics-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
+  width: 100%;
 }
 
 .education-metric-box {
@@ -184,9 +189,10 @@
 /* Highlights Grid */
 .education-highlights-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 0.5rem;
+  width: 100%;
 }
 
 .education-highlight-item {
@@ -215,11 +221,11 @@
 
 @media (max-width: 960px) {
   .education-metrics-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .education-highlights-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -236,18 +242,37 @@
   }
 
   .education-metrics-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0.75rem;
   }
 }
 
 @media (max-width: 480px) {
   .education-card {
-    padding: 1.25rem 1rem;
+    padding: 1.15rem 0.85rem;
+    border-radius: 12px;
+    gap: 1.25rem;
   }
 
   .education-topbar {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.65rem;
+  }
+
+  .education-degree-title {
+    font-size: 1.2rem;
+  }
+
+  .education-institution-name {
+    font-size: 0.95rem;
+  }
+
+  .education-metric-box {
+    padding: 0.75rem 0.85rem;
+  }
+
+  .education-metric-val {
+    font-size: 1.25rem;
   }
 }

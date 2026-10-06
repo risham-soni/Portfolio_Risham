@@ -10,14 +10,18 @@
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
+  width: 100%;
 }
 
 .project-card {
   position: relative;
   aspect-ratio: 16/10;
   min-height: 220px;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
   background: #0b0c10;
   border-radius: 14px;
   overflow: hidden;
@@ -131,7 +135,7 @@
   }
 
   .work-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 1.25rem;
   }
 }
@@ -140,5 +144,18 @@
   .project-card {
     aspect-ratio: 16/11;
     min-height: 180px;
+    border-radius: 12px;
+  }
+
+  .project-info {
+    padding: 1rem 0.85rem;
+  }
+
+  .project-category {
+    font-size: 0.65rem;
+  }
+
+  .project-title {
+    font-size: 1.15rem;
   }
 }

@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="container footer-inner font-mono text-gray">
-        <p>© 2026 Risham Soni. All rights reserved.</p>
+        <p className="footer-copy">© 2026 Risham Soni. All rights reserved.</p>
         <div className="social-links uppercase">
           <a href="https://github.com/risham-soni" target="_blank" rel="noopener noreferrer">Github</a>
           <a href="https://www.linkedin.com/in/risham-soni-2ab5b8277/" target="_blank" rel="noopener noreferrer">LinkedIn</a>

@@ -26,9 +26,8 @@ export default function EngineeringTelemetry() {
           </p>
           <div className="telemetry-meta-row text-gray">
             <span>CORE STACK:</span>
-            <span className="meta-highlight">React.js, Node.js, Express.js, FastAPI, PostgreSQL, Prisma, Redis, Cloud Storage, Python, YOLO.
-
-              & Learning Salesforce technology
+            <span className="meta-highlight">
+              React.js, Node.js, Express.js, FastAPI, PostgreSQL, Prisma, Redis, Cloud Storage, Python, YOLO & Salesforce
             </span>
           </div>
         </div>
